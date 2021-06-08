@@ -1,18 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "f9a58b9d-f5c1-4ae4-b58b-c42fe38326eb"
+    "analytics": "74a5d68d-f995-418b-8efd-f044b6e8e946"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "from-documentation": {
+    "practical-project-one": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/from-documentation",
+            "outputPath": "dist/practical-project-one",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,6 +26,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -39,13 +36,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "from-documentation:build:production"
+              "browserTarget": "practical-project-one:build:production"
             },
             "development": {
-              "browserTarget": "from-documentation:build:development"
+              "browserTarget": "practical-project-one:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "from-documentation:build"
+            "browserTarget": "practical-project-one:build"
           }
         },
         "test": {
@@ -105,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "from-documentation"
+  "defaultProject": "practical-project-one"
 }

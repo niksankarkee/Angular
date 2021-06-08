@@ -1,14 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "f9a58b9d-f5c1-4ae4-b58b-c42fe38326eb"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "from-documentation": {
+    "practical-project": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,17 +20,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/from-documentation",
+            "outputPath": "dist/practical-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -71,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "from-documentation:build:production"
+              "browserTarget": "practical-project:build:production"
             },
             "development": {
-              "browserTarget": "from-documentation:build:development"
+              "browserTarget": "practical-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "from-documentation:build"
+            "browserTarget": "practical-project:build"
           }
         },
         "test": {
@@ -92,12 +93,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "from-documentation"
+  "defaultProject": "practical-project"
 }

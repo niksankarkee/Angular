@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "74a5d68d-f995-418b-8efd-f044b6e8e946"
+    "analytics": "3ac75ce4-d207-4426-b914-4e22b6ae6b62"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practical-project-one": {
+    "my-first-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practical-project-one",
+            "outputPath": "dist/my-first-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "practical-project-one:build:production"
+              "browserTarget": "my-first-app:build:production"
             },
             "development": {
-              "browserTarget": "practical-project-one:build:development"
+              "browserTarget": "my-first-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practical-project-one:build"
+            "browserTarget": "my-first-app:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "practical-project-one"
+  "defaultProject": "my-first-app"
 }

@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { LoansComponent } from './loans/loans.component';
 
 @NgModule({
-  declarations: [AppComponent, HighlightDirective, UsersComponent],
+  declarations: [AppComponent, HighlightDirective, UsersComponent, LoansComponent],
   imports: [
     FormsModule,
     BrowserModule,

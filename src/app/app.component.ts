@@ -32,6 +32,13 @@ export class AppComponent {
 
   txtColor = '';
 
+  lowerCaseExample = 'NIKSAN KARKEE';
+  upperCaseExample = 'niksan karkee';
+  dateExample = Date.now();
+  jsonExample = { userName: 'niksan', major: 'Angular', remarks: 'Nothing' };
+  currencyExample = 123;
+  percentExample = 0.6454;
+
   cssClassExample = 'c3';
   conditionClsProp = 'c4';
 

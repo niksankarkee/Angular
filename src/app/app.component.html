@@ -50,3 +50,70 @@
 <div [ngClass]="conditionClsProp === 'c4' ? 'c4' : 'c5'">This is ngClass using condition Example</div>
 <div [ngClass]="{c4: true, c5: true}">This is ngClass using object Example</div>
 <div [ngClass]="getClsName()">This is ngClass using method Example</div>
+
+
+<h2>Interpolation</h2>
+<p>{{pageHeading}}</p>
+
+<div> {{pageCount}} </div>
+
+<div *ngIf="isUserLoggedIn">
+
+  <div [innerHtml]="userObject.firstName"></div>
+
+</div>
+
+<table>
+  <tr>
+
+    <th>ContactId</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </tr>
+  <tr *ngFor="let contact of contacts">
+
+    <td [title]="contact.firstName">  {{contact.firstName}}</td>
+    <td [title]="contact.lastName">  {{contact.lastName}}</td>
+    <td [title]="contact.contactId">  {{contact.contactId}}</td>
+  </tr>
+</table>
+
+<img [src]="imgUrl" [alt]="imgAlt">
+
+<p [style.color]="textColorVal">Page count value is  {{pageCount}} </p>
+
+<hr>
+<h3>Attribute Bindings</h3>
+
+<table class="bg-primary">
+  <tr>
+    <td>ContactId </td>
+    <td>Contact Name </td>
+    <td>Contact email </td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="colVal">ContactId </td>
+
+    <td>Contact email </td>
+  </tr>
+</table>
+
+<hr>
+<h3>Event Bindings</h3>
+
+<button (click)="sayHello()">Hello</button>
+
+<div (mouseover)="highlightBGColor(1,2,3)">Heighlight me please!!</div>
+
+<input type="text" (focus)="inputBox()">
+
+<hr>
+<h2>Two way binding</h2>
+
+
+<input type="text" [(ngModel)]="username">
+
+<div *ngIf="month > 10">
+  {{username}}
+
+</div>

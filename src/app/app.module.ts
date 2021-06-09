@@ -8,16 +8,31 @@ import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
+import { LoanTypesComponent } from './loan-types/loan-types.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
-  declarations: [AppComponent, HighlightDirective, UsersComponent, LoansComponent],
+  declarations: [
+    AppComponent,
+    HighlightDirective,
+    UsersComponent,
+    LoansComponent,
+    LoanTypesComponent,
+    AddLoansComponent,
+  ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

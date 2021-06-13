@@ -16,6 +16,7 @@ import { AdminDeleteComponent } from './admin-delete/admin-delete.component';
 import { AdminAccessGuard } from './admin-access.guard';
 import { PreferencesCheckGuard } from './preferences-check.guard';
 import { UnsavedGuard } from './unsaved.guard';
+import { AccountInfoGuard } from './account-info.guard';
 
 const routes: Routes = [
   {
@@ -39,6 +40,9 @@ const routes: Routes = [
   {
     path: 'leads',
     component: LeadsGridComponent,
+    resolve: {
+      data: AccountInfoGuard,
+    },
   },
 
   {

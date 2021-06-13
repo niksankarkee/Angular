@@ -1,0 +1,149 @@
+<!-- <h1>{{title}}</h1>
+
+<div class="bg-success" *ngIf="successMsg; then updatedMsg; else errorMsg">User Added successfully</div>
+
+<ng-template #updatedMsg>
+  user was updated
+</ng-template>
+
+<ng-template #errorMsg>
+  User was not added
+</ng-template>
+
+<ul>
+  <li *ngFor="let contact of contacts; index as i; first as f; last as l">
+    <div *ngIf="f" class="bg-danger">This is first record</div>
+    <div>
+      {{i}} {{contact.firstName}} {{contact.lastName}} {{contact.contactId}}
+    </div>
+    <div *ngIf="l" class="bg-danger">This is last record</div>
+  </li>
+</ul>
+<p>New table with even and odd</p>
+<ul>
+  <li *ngFor="let contact of contacts; even as e; odd as o">
+    <div *ngIf="e" class="bg-primary">Even</div>
+
+    <div *ngIf="o" class="bg-danger">ODD</div>
+  </li>
+</ul>
+
+<h4>Learning ngSwitch</h4>
+
+<div [ngSwitch]="superPower">
+  <div *ngSwitchCase="'wonderWoman'">Display wonder woman super powers</div>
+  <div *ngSwitchCase="'superMan'">Display super man super powers</div>
+  <div *ngSwitchCase="'heMan'">Display heman super powers</div>
+  <div *ngSwitchCase="'spiderman'">Display Sipderman super powers</div>
+</div>
+
+<h3>Learning ngStyle</h3>
+<div [ngStyle]="{backgroundColor: 'green', color: '#fff'}">This is green div</div>
+<div [ngStyle]="{backgroundColor: styleProp, color: '#fff'}">This is dynamic Color div</div>
+<div [ngStyle]="{backgroundColor: txtColor === 'blue' ? 'blue' : 'purple', color: '#fff'}">This is condition div</div>
+
+
+<h3>Learning ngClass</h3>
+<div [ngClass]="'c1'">This is ngClass Example</div>
+<div [ngClass]="'c1 c2'">This is ngClass multiple class Example</div>
+<div [ngClass]="cssClassExample">This is ngClass variable Example</div>
+<div [ngClass]="conditionClsProp === 'c4' ? 'c4' : 'c5'">This is ngClass using condition Example</div>
+<div [ngClass]="{c4: true, c5: true}">This is ngClass using object Example</div>
+<div [ngClass]="getClsName()">This is ngClass using method Example</div>
+
+
+<h2>Interpolation</h2>
+<p>{{pageHeading}}</p>
+
+<div> {{pageCount}} </div>
+
+<div *ngIf="isUserLoggedIn">
+
+  <div [innerHtml]="userObject.firstName"></div>
+
+</div>
+
+<table>
+  <tr>
+
+    <th>ContactId</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </tr>
+  <tr *ngFor="let contact of contacts">
+
+    <td [title]="contact.firstName">  {{contact.firstName}}</td>
+    <td [title]="contact.lastName">  {{contact.lastName}}</td>
+    <td [title]="contact.contactId">  {{contact.contactId}}</td>
+  </tr>
+</table>
+
+<img [src]="imgUrl" [alt]="imgAlt">
+
+<p [style.color]="textColorVal">Page count value is  {{pageCount}} </p>
+
+<hr>
+<h3>Attribute Bindings</h3>
+
+<table class="bg-primary">
+  <tr>
+    <td>ContactId </td>
+    <td>Contact Name </td>
+    <td>Contact email </td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="colVal">ContactId </td>
+
+    <td>Contact email </td>
+  </tr>
+</table>
+
+<hr>
+<h3>Event Bindings</h3>
+
+<button (click)="sayHello()">Hello</button>
+
+<div (mouseover)="highlightBGColor(1,2,3)">Heighlight me please!!</div>
+
+<input type="text" (focus)="inputBox()">
+
+<hr>
+<h2>Two way binding</h2>
+
+
+<input type="text" [(ngModel)]="username">
+
+<div *ngIf="month > 10">
+  {{username}}
+
+</div>
+
+<hr>
+<h2>Pipes</h2>
+<h3>Built in Pipes</h3>
+
+<div> {{lowerCaseExample | lowercase}} </div>
+<div> {{upperCaseExample | uppercase}} </div>
+<div> {{dateExample | date}} </div>
+<div> {{jsonExample | json}} </div>
+<div> {{currencyExample | currency}} </div>
+<div> {{percentExample | percent}} </div>
+
+<h3>Parametrized Pipes</h3>
+<div> {{currencyExample | currency : 'NRS'}} </div>
+
+<div> {{dateExample | date: 'MM-dd-yy'}} </div>
+
+<div> {{percentExample | percent: '2.2-2'}} </div>
+
+<h3>Chaining Pipes</h3>
+<div> {{dateExample | date | uppercase}} </div>
+
+<div> {{currencyExample | currency : 'CAD' | lowercase}} </div>
+
+<hr> -->
+
+<h1>This is angular application</h1>
+<router-outlet></router-outlet>
+<!-- <router-outlet name="addLoan"></router-outlet>
+<router-outlet name="editLoan"></router-outlet> -->

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './highlight.directive';
@@ -11,6 +10,12 @@ import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module';
+
+import { ProductComponent } from './product/product.component';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +25,17 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     LoansComponent,
     LoanTypesComponent,
     AddLoansComponent,
+
+    ProductComponent,
+    ClientsComponent,
+    SearchComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [
     {

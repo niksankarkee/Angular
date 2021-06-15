@@ -1,0 +1,21 @@
+<form #addCustomerForm="ngForm" (submit)="addCustomer(addCustomerForm)">
+  <input type="text" [(ngModel)]="firstname" name="firstname" required>
+  <br>
+  <input type="checkbox" [(ngModel)]="terms" name="terms" required> Accept Terms and conditions
+  <br>
+  <select [(ngModel)]="customerType" name="customerType" required>
+    <option value="1">Premium</option>
+    <option value="2">Standard</option>
+  </select>
+  <br>
+  <textarea [(ngModel)]="description" name="description" cols="30" rows="10" required></textarea>
+  <br>
+
+  <button type="submit" [disabled]="!addCustomerForm.valid">Add Customer</button>
+  <button class="btn btn-link" (click)="resetForm(addCustomerForm)">Reset</button>
+  <button class="btn btn-link" (click)="loadValues(addCustomerForm)">set Form Values</button>
+</form>
+
+<div>
+  {{ firstname }}
+</div>
